@@ -4,7 +4,10 @@ function showResults(data) {
 
 function watch() {
     window.navigator.geolocation.watchPosition(
-        ({ coords: { latitude, longitude, accuracy } }) => showResults({ latitude, longitude, accuracy }),
+        ({
+            coords: { latitude, longitude, accuracy },
+            timestamp,
+        }) => showResults({ latitude, longitude, accuracy, date: new Date(timestamp).toLocaleString() }),
         ({ message }) => showResults({ error: message }),
         {
             maximumAge: 0,
