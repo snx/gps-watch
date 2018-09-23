@@ -12,6 +12,7 @@ function watch() {
         {
             maximumAge: 0,
             timeout: 60000,
+            enableHighAccuracy: true,
         },
     );
 }
