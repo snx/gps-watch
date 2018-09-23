@@ -10,7 +10,7 @@ function watch() {
         }) => showResults({ latitude, longitude, accuracy, date: new Date(timestamp).toLocaleString() }),
         ({ message }) => showResults({ error: message }),
         {
-            maximumAge: 0,
+            maximumAge: 20000,
             timeout: 60000,
             enableHighAccuracy: true,
         },
